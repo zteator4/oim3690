@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- DOCTYPE declares this is an HTML5 document -->
+
+<html lang="en">
+<!-- <html> is the root element that wraps all other elements -->
+<!-- lang="en" specifies the language (English) -->
+
+<head>
+  <!-- <head> contains metadata and doesn't display on the page -->
+  
+  <meta charset="UTF-8">
+  <!-- <meta> defines character encoding (UTF-8 supports all languages) -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- This makes the page responsive on mobile devices -->
+  
+  <title>HTML Beginner Guide</title>
+  <!-- <title> appears in the browser tab -->
+  
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #fd0404; }
+    h2 { color: #025914; margin-top: 30px; }
+    .tag-example { background-color: #f0f0f0; padding: 10px; margin: 10px 0; border-left: 4px solid #007bff; }
+  </style>
+  <!-- <style> defines CSS styling for the page -->
+  
+</head>
+
+<body>
+  <!-- <body> contains all visible content on the page -->
+  
+  <h1>HTML Tags Explained</h1>
+  <!-- <h1> is a heading (largest) - use h1 to h6 for different sizes -->
+  
+  <h2>Text Elements</h2>
+  
+  <div class="tag-example">
+    <!-- <div> is a container to group content (block element) -->
+    <p>
+      <!-- <p> is a paragraph tag for text blocks -->
+      This is a paragraph. It automatically adds space above and below.
+    </p>
+    
+    <p>
+      This is <strong>bold text</strong> using the <strong> tag.
+      <!-- <strong> makes text bold and indicates importance -->
+      
+      This is <em>emphasized (italic) text</em> using the <em> tag.
+      <!-- <em> makes text italic and indicates emphasis -->
+      
+      This is <u>underlined text</u> using the <u> tag.
+      <!-- <u> underlines text -->
+    </p>
+  </div>
+  
+  <h2>Links and Images</h2>
+  
+  <div class="tag-example">
+    <a href="https://www.google.com">This is a link to Google</a>
+    <!-- <a> creates a hyperlink; href specifies where it goes -->
+    
+    <br>
+    <!-- <br> creates a line break -->
+    
+    <img src="https://via.placeholder.com/150" alt="Placeholder image">
+    <!-- <img> displays an image; src is the image location; alt is text shown if image doesn't load -->
+  </div>
+  
+  <h2>Lists</h2>
+  
+  <div class="tag-example">
+    <h3>Unordered List (bullets)</h3>
+    <!-- <h3> is a smaller heading -->
+    <ul>
+      <!-- <ul> creates an unordered (bulleted) list -->
+      <li>First item</li>
+      <!-- <li> is a list item -->
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+    
+    <h3>Ordered List (numbered)</h3>
+    <ol>
+      <!-- <ol> creates an ordered (numbered) list -->
+      <li>Step 1</li>
+      <li>Step 2</li>
+      <li>Step 3</li>
+    </ol>
+  </div>
+  
+  <h2>Forms and Input</h2>
+  
+  <div class="tag-example">
+    <form>
+      <!-- <form> contains input fields for user data -->
+      
+      <label for="name">Name:</label>
+      <!-- <label> describes what an input field is for -->
+      
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+      <!-- <input> creates a text field; id connects to label; placeholder shows hint text -->
+      
+      <br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+      <!-- type="email" validates that input looks like an email -->
+      
+      <br><br>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea>
+      <!-- <textarea> allows multiple lines of text input -->
+      
+      <br><br>
+      
+      <button type="submit">Submit</button>
+      <!-- <button> creates a clickable button -->
+    </form>
+  </div>
+  
+  <h2>Tables</h2>
+  
+  <div class="tag-example">
+    <table border="1">
+      <!-- <table> creates a table -->
+      <tr>
+        <!-- <tr> is a table row -->
+        <th>Name</th>
+        <!-- <th> is a table header cell -->
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <!-- <td> is a table data cell -->
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Sarah</td>
+        <td>30</td>
+      </tr>
+    </table>
+  </div>
+  
+  <h2>Semantic Elements</h2>
+  
+  <div class="tag-example">
+    <header>
+      <!-- <header> represents introductory content or navigation -->
+      This is a header section
+    </header>
+    
+    <section>
+      <!-- <section> defines a thematic group of content -->
+      <h3>Main Content</h3>
+      <p>This is the main content of the page.</p>
+    </section>
+    
+    <footer>
+      <!-- <footer> represents footer content like copyright -->
+      &copy; 2026 My Website. All rights reserved.
+      <!-- &copy; displays the copyright symbol © -->
+    </footer>
+  </div>
+  
+  <h2>Other Useful Tags</h2>
+  
+  <div class="tag-example">
+    <p>
+      <span>Inline text container</span> - <span> groups text without adding breaks
+      <!-- <span> is like <div> but inline (doesn't create new line) -->
+    </p>
+    
+    <hr>
+    <!-- <hr> creates a horizontal line -->
+    
+    <blockquote>
+      This is a blockquote, typically used for quotes or important text.
+      <!-- <blockquote> indents text and marks it as a quote -->
+    </blockquote>
+    
+    <code>console.log("Hello");</code>
+    <!-- <code> displays code in a monospace font -->
+  </div>
+  
+</body>
+</html>
