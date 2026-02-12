@@ -5,8 +5,8 @@ This is my course repository for OIM3690.
 - **Name**: Zander Teator
 
 ## Links
-- [My Portfolio](https://zteator4.github.io)
-- [My Current Portfolio: Lovable](https://www.alexanderteator.com)
+- [My Personal Website Project](https://zteator4.github.io)
+- [My Personal Portfolio Portfolio: Lovable](https://www.alexanderteator.com)
 
 # Learning Log Template:
 
