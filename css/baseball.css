@@ -1,0 +1,112 @@
+:root {
+    --babson-green: #004d40;
+    --accent: #d4af37;
+    --bg: #050505;
+    --card: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg);
+    color: #fff;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Glass Navigation Bar */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo { font-weight: 900; color: var(--babson-green); letter-spacing: 2px; }
+
+/* Dashboard Layout */
+.dashboard-container {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.exhibit-section {
+    min-height: 80vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Large Hero Card for College */
+.hero-card {
+    background: linear-gradient(45deg, var(--card), rgba(0, 77, 64, 0.1));
+    border: 1px solid var(--border);
+    padding: 60px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.7rem;
+}
+
+/* Data Grids */
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover { border-color: var(--babson-green); transform: translateY(-5px); }
+
+.era-tag { color: var(--accent); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; }
+
+/* Stat Pills */
+.stat-grid { display: flex; gap: 15px; margin-top: 30px; }
+.stat-pill {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.stat-pill b { color: var(--babson-green); margin-right: 5px; }
+
+/* Ticker Effect */
+.ticker {
+    margin-top: 20px;
+    background: #000;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+}

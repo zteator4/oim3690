@@ -3,149 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZT3 | Career App</title>
-    <style>
-      :root {
-        --babson-green: #004d40;
-        --accent: #d4af37;
-        --surface: rgba(255, 255, 255, 0.03);
-        --blur: blur(12px);
-      }
-
-      body {
-        background: radial-gradient(at top left, #1a1a1a, #050505);
-        color: #fff;
-        font-family: "Inter", system-ui, sans-serif;
-        margin: 0;
-        display: flex; /* Sidebar layout */
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      /* Side Navigation Bar */
-      nav {
-        width: 260px;
-        background: rgba(0, 0, 0, 0.5);
-        border-right: 1px solid #333;
-        display: flex;
-        flex-direction: column;
-        padding: 40px 20px;
-      }
-
-      .nav-item {
-        padding: 15px;
-        color: #888;
-        text-decoration: none;
-        font-weight: 500;
-        transition: 0.3s;
-        border-radius: 8px;
-        margin-bottom: 5px;
-      }
-
-      .nav-item:hover,
-      .nav-item.active {
-        background: var(--surface);
-        color: var(--accent);
-      }
-
-      /* Main App Content */
-      main {
-        flex: 1;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        padding: 0 60px;
-      }
-
-      section {
-        height: 100vh;
-        scroll-snap-align: start;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      /* Glassmorphism Card */
-      .glass-panel {
-        background: var(--surface);
-        backdrop-filter: var(--blur);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 50px;
-        border-radius: 24px;
-        max-width: 800px;
-        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      .glass-panel:hover {
-        transform: scale(1.02);
-        border-color: var(--babson-green);
-      }
-
-      .era-tag {
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-        margin-bottom: 15px;
-        display: block;
-      }
-
-      h2 {
-        font-size: 3.5rem;
-        margin: 0 0 20px 0;
-      }
-
-      .app-footer {
-        margin-top: 40px;
-        display: flex;
-        gap: 20px;
-      }
-
-      .pill {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 8px 20px;
-        border-radius: 100px;
-        font-size: 0.9rem;
-      }
-    </style>
+    <title>ZT3 | Career Dashboard</title>
+    <link rel="stylesheet" href="/css/baseball.css" />
   </head>
   <body>
-    <nav>
-      <div
-        style="
-          font-size: 1.5rem;
-          font-weight: 800;
-          margin-bottom: 40px;
-          color: var(--babson-green);
-        "
-      >
-        ZT.EXHIBIT
+    <nav class="glass-nav">
+      <div class="nav-content">
+        <span class="logo">ZT.STATCAST</span>
+        <div class="nav-links">
+          <a href="#college">College</a>
+          <a href="#highschool">High School</a>
+          <a href="#youth">Youth</a>
+        </div>
       </div>
-      <a href="#rec" class="nav-item active">Rec Ball</a>
-      <a href="#travel" class="nav-item">Travel Ball</a>
-      <a href="#school" class="nav-item">School Ball</a>
-      <a href="#summer" class="nav-item">Summer Ball</a>
-      <a href="#college" class="nav-item">College (Babson)</a>
-      <a href="#pro-summer" class="nav-item">College Summer</a>
     </nav>
 
-    <main>
-      <section id="college">
-        <div class="glass-panel">
-          <span class="era-tag">The Peak Performance</span>
-          <h2>College Ball</h2>
-          <p style="font-size: 1.2rem; opacity: 0.7">
-            Senior Captain at Babson College. Transitioning from a 2022 recruit
-            to a 2026 team leader, emphasizing strategic growth and performance
-            on and off the field.
-          </p>
-          <div class="app-footer">
-            <div class="pill">Babson '26</div>
-            <div class="pill" style="border: 1px solid var(--accent)">
-              Senior Captain
+    <main class="dashboard-container">
+      <section id="college" class="exhibit-section">
+        <div class="hero-card">
+          <div class="badge">CAPTAIN</div>
+          <div class="hero-content">
+            <span class="era-tag">2023 - 2026</span>
+            <h2>Babson College</h2>
+            <p>
+              Leading the program through the final inning of a collegiate
+              career.
+            </p>
+            <div class="stat-grid">
+              <div class="stat-pill"><b>POS</b> <span>P / INF</span></div>
+              <div class="stat-pill"><b>DIV</b> <span>NCAA DIII</span></div>
+              <div class="stat-pill"><b>STATUS</b> <span>Senior</span></div>
             </div>
           </div>
         </div>
       </section>
+
+      <section id="highschool" class="exhibit-section">
+        <div class="data-grid">
+          <div class="stat-card">
+            <h3>Saratoga Varsity</h3>
+            <span class="era-tag">2021 - 2022</span>
+            <p>Competing at the highest level of Section II baseball.</p>
+            <div class="ticker">
+              <span>HS Highlights: Saratoga Springs High School</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <h3>Travel & Summer</h3>
+            <span class="era-tag">Barnstormers / Lightning</span>
+            <p>Elite regional play through 15U-18U circuits.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="youth" class="exhibit-section">
+        <div class="data-grid">
+          <div class="stat-card">
+            <h3>The Foundation</h3>
+            <span class="era-tag">2013 - 2016</span>
+            <p>SALL Minors & Majors. Where the journey began.</p>
+          </div>
+          <div class="stat-card">
+            <h3>All-Stars</h3>
+            <span class="era-tag">8U - 12U</span>
+            <p>Cal Ripken All-Star selections for Saratoga Springs.</p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="app-footer">
+      <p>Comprehensive Career Data | 2013 - 2026</p>
+    </footer>
   </body>
 </html>
