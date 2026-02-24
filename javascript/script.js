@@ -1,19 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('expandDev');
-    const content = document.getElementById('devContent');
-    const icon = toggle.querySelector('.icon');
+    const dots = document.querySelectorAll('.dot');
+    const sections = document.querySelectorAll('.era-anchor');
 
-    toggle.addEventListener('click', () => {
-        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-        
-        if (isOpen) {
-            content.style.maxHeight = '0px';
-            icon.textContent = '+';
-            toggle.style.background = 'white';
-        } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-            icon.textContent = '-';
-            toggle.style.background = '#f9f9f9';
-        }
+    window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+            if (dot.getAttribute('href').includes(current)) {
+                dot.classList.add('active');
+            }
+        });
     });
 });
