@@ -1,0 +1,59 @@
+/* 1. CSS Variables (The "Modern" way) */
+:root {
+  --babson-green: #006644;
+  --accent-gold: #ceb888;
+  --dark-text: #333;
+  --light-bg: #f4f4f4;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+  padding: 40px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 2. Using Flexbox for layout (Preview for next class!) */
+main {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 3. Interest Cards with Hover & Transitions */
+.interest-card {
+  background: white;
+  border-left: 5px solid var(--babson-green);
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+  /* Smooth transition for the hover effect */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.interest-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border-left-color: var(--accent-gold);
+}
+
+/* 4. Using Span for inline styling */
+.highlight {
+  font-weight: bold;
+  color: var(--babson-green);
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+h2 {
+  color: var(--babson-green);
+  margin-top: 0;
+}
