@@ -5,8 +5,8 @@ This is my course repository for OIM3690.
 - **Name**: Zander Teator
 
 ## Links + Projects
-- [My Personal Website Project](https://zteator4.github.io)
-- [My Personal Portfolio Portfolio: Lovable](https://www.alexanderteator.com)
+- [My Personal Website Project: Baseball](https://zteator4.github.io)
+- [My Personal Portfolio: Lovable](https://www.alexanderteator.com)
 - [Mini Project 1: Site for Another Person](https://github.com/zteator4/mini-project)
 
 
