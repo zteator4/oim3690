@@ -1,0 +1,66 @@
+/* Styles for the AI-generated landing page (s12-tabliss-AI.html) */
+
+body {
+    /* Kelso Dunes from Unsplash, matches provided screenshot */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 0.5rem;
+}
+
+.time {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6rem; /* larger clock text */
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* more spacing between items like screenshot */
+}
+
+.social .link {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social .link:hover {
+    color: rgba(255,255,255,0.7);
+}
+
+/* overlay helpers for little captions and settings */
+.overlay {
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    pointer-events: none; /* overlays not interactive */
+}
+
+.top-left { top: 0; left: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+.settings {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
