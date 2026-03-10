@@ -1,0 +1,232 @@
+/* CSS Study Guide */
+
+/* ===========================================
+   CSS Selectors
+   =========================================== */
+
+/* Element Selector */
+p {
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* ID Selector */
+#unique {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Combining Selectors (Descendant) */
+.container .highlight {
+    border: 1px solid blue;
+}
+
+/* Pseudo-class */
+.hover-me:hover {
+    color: green;
+    cursor: pointer;
+}
+
+/* ===========================================
+   Box Model, Display Types, div & span
+   =========================================== */
+
+/* Box Model */
+.box {
+    width: 200px;
+    padding: 20px; /* Space inside the border */
+    border: 5px solid black; /* Border around padding */
+    margin: 20px; /* Space outside the border */
+    background-color: lightgray;
+}
+
+/* Display Types */
+.block-display {
+    display: block;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.inline-display {
+    display: inline;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.inline-block-display {
+    display: inline-block;
+    background-color: lightcoral;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* ===========================================
+   CSS Variables, Transitions
+   =========================================== */
+
+/* CSS Variables */
+:root {
+    --main-color: blue;
+    --secondary-color: orange;
+}
+
+.variable-example {
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+/* Transitions */
+.transition-button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.transition-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* ===========================================
+   Layout: Flexbox & Grid
+   =========================================== */
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightyellow;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.flex-item {
+    background-color: lightcyan;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: lightpink;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.grid-item {
+    background-color: lightgreen;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* ===========================================
+   Forms
+   =========================================== */
+
+form {
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ===========================================
+   Responsive Design Basics
+   =========================================== */
+
+/* Viewport is set in HTML meta tag */
+
+/* Media Queries */
+.responsive-box {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .responsive-box {
+        background-color: lightgreen;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-box {
+        background-color: lightcoral;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--main-color);
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+}
