@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Play With JS</h1>
+    <button>Click Me!</button>
+    <p>Hello, World!</p>
+    <p>Hello, World!</p>
+    <p>Hello, World!</p>
+    <p>Hello, World!</p>
+    <h2>Whats Up?</h2>
+<script>
+    document.querySelector('button').addEventListener('click', function() {
+        alert('U clicked the button!');
+    });
+    document.querySelectorAll('p').forEach(function(p) {
+        p.addEventListener('click', function() {
+            p.textContent = 'You clicked a paragraph!';
+        });
+    });
+    document.querySelector('h1'). addEventListener('click', function(){style.color = 'red'});
+</script>
+  </body>
+</html>

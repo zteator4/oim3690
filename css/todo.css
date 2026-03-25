@@ -1,0 +1,338 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.global-lists,
+.daily-lists {
+  margin-bottom: 40px;
+}
+.add-global-section {
+  display: flex;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.add-global-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+.add-global-section input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.add-global-section button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.add-global-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#add-day button {
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ff9800, #f57c00);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+#add-day button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.day-card {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.day-card summary {
+  padding: 20px;
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px 12px 0 0;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.day-card summary:hover {
+  background: linear-gradient(45deg, #1976d2, #1565c0);
+}
+.day-card summary .date {
+  flex: 1;
+}
+.day-card summary .delete-day-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+.day-card summary .delete-day-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.day-card[open] summary {
+  border-radius: 12px 12px 0 0;
+}
+.day-content {
+  padding: 20px;
+}
+.add-section {
+  display: flex;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+.add-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+.add-section input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.add-section button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.add-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.section {
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section-header h2 {
+  flex: 1;
+  margin: 0;
+}
+.section-buttons {
+  display: flex;
+}
+.section-buttons button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+.section-buttons button:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 100%);
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  transition: width 0.8s ease-in-out;
+  position: relative;
+}
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.progress-bar span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 1;
+}
+.todo-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+.todo-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+.todo-input input:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+.todo-input button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.todo-input button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+.todo-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
+  transition: all 0.5s ease;
+}
+.todo-text {
+  flex: 1;
+  margin-right: 15px;
+  font-size: 16px;
+}
+.complete-btn {
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.delete-btn {
+  background: linear-gradient(45deg, #f44336, #d32f2f);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.complete-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
