@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>My Shopping List</h1>
+    <ul id="shopping-list"></ul>
+    
+    <input type="text" id="new-item" placeholder="Enter new item">
+    <button id="add-button">Add Item</button>
+
+    <script>
+        // Start with an array of items
+        const items = ['Milk', 'Eggs', 'Bread'];
+        
+        // Get references to the HTML elements
+        const ul = document.getElementById('shopping-list');
+        const input = document.getElementById('new-item');
+        const button = document.getElementById('add-button');
+        
+        // Function to render the list
+        function renderList() {
+            // Clear the list first
+            ul.innerHTML = '';
+            
+            // Loop through each item in the array
+            for (let i = 0; i < items.length; i++) {
+                // Create a new <li> element
+                const li = document.createElement('li');
+                // Set the text of the <li> to the current item
+                li.textContent = items[i];
+                // Add the <li> to the <ul>
+                ul.appendChild(li);
+            }
+        }
+        
+        // Add event listener to the button
+        button.addEventListener('click', function() {
+            // Get the value from the input
+            const newItem = input.value;
+            // If the input is not empty, add it to the array
+            if (newItem.trim() !== '') {
+                items.push(newItem);
+                // Clear the input
+                input.value = '';
+                // Re-render the list
+                renderList();
+            }
+        });
+        
+        // Render the initial list when the page loads
+        renderList();
+    </script>
+</body>
+</html>
