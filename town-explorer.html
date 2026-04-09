@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="search" placeholder="Search towns..." />
+    <p id="count">Towns: 0</p>
+    <ul id="town-list"></ul>
+    <p id="largest"></p>
+
+    <script>
+      let towns = [];
+
+      async function loadTowns() {
+        try {
+          const response = await fetch("https://oim.108122.xyz/mass");
+          const data = await response.json();
+          towns = data.data;
+          displayTowns(towns.slice(0, 10));
+          updateCount(towns.length);
+          findLargest();
+        } catch (error) {
+          document.getElementById("count").textContent = "Error loading towns";
+        }
+      }
+
+      function displayTowns(townList) {
+        const list = document.getElementById("town-list");
+        list.innerHTML = townList
+          .map(
+            (t) =>
+              `<li>${t.name} (${t.county}) - pop ${t.population.toLocaleString()}</li>`,
+          )
+          .join("");
+      }
+
+      function updateCount(num) {
+        document.getElementById("count").textContent = `Towns: ${num}`;
+      }
+
+      function findLargest() {
+        if (towns.length === 0) return;
+        const maxTown = towns.reduce((max, t) =>
+          t.population > max.population ? t : max,
+        );
+        document.getElementById("largest").textContent =
+          `Largest: ${maxTown.name} (${maxTown.county}) - pop ${maxTown.population.toLocaleString()}`;
+      }
+
+      document.getElementById("search").addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const filtered = towns.filter((t) =>
+          t.name.toLowerCase().includes(query),
+        );
+        displayTowns(filtered.slice(0, 10));
+        updateCount(filtered.length);
+      });
+
+      loadTowns();
+    </script>
+  </body>
+</html>
