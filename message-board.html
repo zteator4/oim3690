@@ -24,7 +24,11 @@
 
       function displayMessages(messages) {
         const div = document.getElementById("messages");
-        div.innerHTML = messages.map((m) => `<p>${m.text || m.message || m.content || m.body || m}</p>`).join("");
+        div.innerHTML = messages
+          .map(
+            (m) => `<p>${m.text || m.message || m.content || m.body || m}</p>`,
+          )
+          .join("");
       }
 
       document
